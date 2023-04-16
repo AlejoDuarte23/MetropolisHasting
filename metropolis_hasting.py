@@ -96,8 +96,8 @@ if __name__ == '__main__':
     iterations = 100000
 
     # Run multiple chains with different settings, parameters, and initial conditions
-    num_chains = 2
-    initial_conditions = [np.random.uniform(0, 10, 3) for _ in range(num_chains)]
+    num_chains = 4
+    initial_conditions = [np.random.uniform(1, 5, 3) for _ in range(num_chains)]
 
     chain_args = [(i, likelihood, prior, transition_model, init_cond, iterations, y, acceptance, std_tr, pri_lim) for i, init_cond in enumerate(initial_conditions)]
 
